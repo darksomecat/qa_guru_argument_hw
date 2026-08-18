@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.*;
 import java.time.Duration;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class YaMusicTest {
@@ -33,8 +34,8 @@ public class YaMusicTest {
         $("[data-key='" + languageKey + "']").click();
         switchTo().defaultContent();
 
-       $(".NavbarDesktopUnauthorizedBar_title__vf0W7").shouldHave(text(language.headertext));
-       $(".NavbarDesktopUnauthorizedBar_subtitle__anNNQ").shouldHave(text(language.headersubtext));
+        $(byText(language.headertext)).shouldBe(visible);
+        $(byText(language.headersubtext)).shouldBe(visible);
 
     }
 
@@ -53,8 +54,8 @@ public class YaMusicTest {
         open("https://passport.yandex.ru/");
 
         $("[data-testid='split-add-user-more-button']").click();
-        $("[data-testid='menu-option-switchToLogin']").click(); //один $ поиск 1 элемента, 2 поиск по всем эл
-        $("[data-testid='text-field-input']").setValue(loginQuery).pressEnter(); //один $ поиск 1 элемента, 2 поиск по всем эл
+        $("[data-testid='menu-option-switchToLogin']").click();
+        $("[data-testid='text-field-input']").setValue(loginQuery).pressEnter();
         $("[data-testid='page-password'").shouldBe(visible);
     }
 

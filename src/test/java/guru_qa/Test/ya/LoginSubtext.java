@@ -2,7 +2,7 @@ package guru_qa.Test.ya;
 
  public enum LoginSubtext {
 
-     RU("Войдите в аккаунт3", "Чтобы слушать музыку и подкасты без ограничений"),
+     RU("Войдите в аккаунт", "Чтобы слушать музыку и подкасты без ограничений"),
      EN("Log in to your account", "To listen to music and podcasts without restrictions"),
      UZ("Hisobga kiring", "Musiqa va podkastlarni cheklovlarsiz tinglash uchun"),
      KK("Аккаунтқа кіріңіз", "Музыка мен подкастарды шектеулерсіз тыңдау үшін");

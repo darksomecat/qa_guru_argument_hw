@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class testContactFormSubmission {
+public class TestContactFormSubmission {
     @BeforeEach
     void setup(){
         Configuration.pageLoadStrategy = "eager";
