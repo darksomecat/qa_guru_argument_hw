@@ -1,5 +1,5 @@
 /.idea
-/.src/main
+/src/main
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
